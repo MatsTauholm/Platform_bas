@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public void SetStartPos(float newPosX, float newPosY)
+    {
+        transform.position = new Vector3(newPosX,newPosY);
+    }
+
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -45,4 +50,5 @@ public class PlayerMovement : MonoBehaviour
             shouldJump = false;
         }         
     }
+   
 }
