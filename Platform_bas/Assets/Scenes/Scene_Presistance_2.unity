@@ -265,6 +265,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Persist
       objectReference: {fileID: 0}
+    - target: {fileID: 5035749526870208305, guid: 67dec28ae7e1d044a91646939b417508, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.929096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035749526870208305, guid: 67dec28ae7e1d044a91646939b417508, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4447476
+      objectReference: {fileID: 0}
     - target: {fileID: 5305345063221717257, guid: 67dec28ae7e1d044a91646939b417508, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.929096
@@ -304,6 +312,14 @@ PrefabInstance:
     - target: {fileID: 5305345063221717257, guid: 67dec28ae7e1d044a91646939b417508, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083035319688718448, guid: 67dec28ae7e1d044a91646939b417508, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.429096
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083035319688718448, guid: 67dec28ae7e1d044a91646939b417508, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4447476
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -491,6 +507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6284afd605f193f439fc14eae143a70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 0}
 --- !u!1 &1509707599
 GameObject:
   m_ObjectHideFlags: 0

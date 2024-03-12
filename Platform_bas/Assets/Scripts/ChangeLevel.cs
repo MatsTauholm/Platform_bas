@@ -13,7 +13,7 @@ public class ChangeLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //FindObjectOfType<ScenePersist>().ResetScenePersist();
+            FindObjectOfType<ScenePersist>().ResetScenePersist();
             SceneManager.LoadScene(goToLevel);
             FindObjectOfType<PlayerMovement>().SetStartPos(newPosX,newPosY);
         }

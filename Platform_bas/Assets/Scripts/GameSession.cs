@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
-    int score = 0;
+    public int score = 0;
+    [SerializeField] TextMeshProUGUI scoreText;
     void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -18,11 +20,16 @@ public class GameSession : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-    
+
+    private void Start()
+    {
+        scoreText.text = "Score: " + score.ToString();
+    }
+
     public void SetScore(int addScore)
     {
         score += addScore;
-        Debug.Log(score);
+        scoreText.text = "Score: " + score.ToString();
     }
 
     void ResetGameSession()
