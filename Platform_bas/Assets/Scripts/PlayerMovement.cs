@@ -7,16 +7,18 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpImpulse = 5f;
-    public ContactFilter2D groundFilter;
 
+    public ContactFilter2D groundFilter;
     private Vector2 moveInput;
     private Rigidbody2D rb;
+    private BoxCollider2D coll;
     private bool isGrounded => rb.IsTouching(groundFilter);
     private bool shouldJump;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     public void SetStartPos(float newPosX, float newPosY)
@@ -50,5 +52,13 @@ public class PlayerMovement : MonoBehaviour
             shouldJump = false;
         }         
     }
-   
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (coll.IsTouchingLayers(LayerMask.GetMask("Hazards")))
+        {
+            FindObjectOfType<GameSession>().PlayerProcessDeath();
+        }
+    }
+
 }
