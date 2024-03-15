@@ -10,6 +10,7 @@ public class GameSession : MonoBehaviour
     public int playerLives = 3;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI livesText;
+
     void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -54,6 +55,7 @@ public class GameSession : MonoBehaviour
     {
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
-        Destroy(gameObject);
+        Destroy(gameObject);       
     }
+
 }
