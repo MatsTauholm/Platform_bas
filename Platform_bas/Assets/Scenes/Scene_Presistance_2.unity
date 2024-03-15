@@ -673,6 +673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 6114103726749625866, guid: ab78bd70e8961e94e863308206f9261e, type: 3}
+      propertyPath: jumpImpulse
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9033252953569890042, guid: ab78bd70e8961e94e863308206f9261e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.75
@@ -750,8 +754,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goToLevel: Scene_Presistance_1
-  newPosX: 5.75
-  newPosY: -2.4
 --- !u!61 &1509707601
 BoxCollider2D:
   m_ObjectHideFlags: 0
